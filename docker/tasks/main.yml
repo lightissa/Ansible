@@ -1,0 +1,9 @@
+---
+# tasks file for docker
+- name: Install docker and dependencies
+  include: "os_family/CentOS.yml"
+  when:  ansible_distribution == "CentOS" 
+  
+
+- name: Configure docker
+  include: "configuration.yml"
